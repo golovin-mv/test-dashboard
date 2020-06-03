@@ -1,0 +1,48 @@
+{
+  "name": "test-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --package ./package.json",
+    "start": "node app.js",
+    "start-sender": "node startSender.js",
+    "dev-front": "webpack --mode development --watch",
+    "build-front": "webpack --mode production"
+  },
+  "author": "mvgolovin",
+  "license": "ISC",
+  "type": "module",
+  "mocha": {
+    "spec": "**/**/*.spec.js",
+    "diff": true,
+    "extension": [
+      "js"
+    ],
+    "reporter": "spec",
+    "slow": 75,
+    "timeout": 2000,
+    "watch-files": [
+      "app/**/*.js"
+    ],
+    "exclude": [
+      "**/node_modules/**/*.js"
+    ]
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-mocha": "^7.0.1",
+    "mocha": "^7.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "react-select": "^3.1.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "styled-components": "^5.1.1"
+  }
+}
